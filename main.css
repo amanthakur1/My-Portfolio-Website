@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet&display=swap');
+:root {
+    --Snigle-font: "Sniglet", cursive;
+    --Rubik: "Rubik", cursive;
+    --Patua: "Patua One", cursive;
+    --Lobster: "Lobster", cursive;
+}
+
 
 /*Start global*/
 
@@ -27,8 +35,9 @@ a {
 }
 
 p {
+    font-family: var(--Snigle-font);
     font-size: 1.8rem;
-    color: whitesmoke;
+    color: #c0c4c7;
     font-weight: 300;
     opacity: 0.7;
 }
@@ -57,12 +66,13 @@ section {
 
 .section-heading {
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
 }
 
 .section-heading h1 {
+    font-family: var(--Patua);
     font-size: 3.5rem;
-    color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -93,8 +103,11 @@ section {
 }
 
 .section-heading h6 {
+    margin-top: 2rem;
+    font-family: var(--Snigle-font);
     font-size: 1.6rem;
     font-weight: 300;
+    color: rgba(238, 236, 236, 0.4);
 }
 
 .has-margin-right {
@@ -232,6 +245,7 @@ li {
 
 .landing-text h6 {
     font-size: 2rem;
+    font-family: var(--Snigle-font);
     font-weight: 300;
 }
 
@@ -269,6 +283,15 @@ li {
 .profile-img {
     flex: 1;
     margin-right: 5rem;
+}
+
+.profile-img img {
+    border-radius: 5%;
+    border: 2px solid lightgray;
+}
+
+.profile-img img:hover {
+    transform: scale(1.1);
 }
 
 .about-details {
@@ -315,6 +338,7 @@ li {
 .skills h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: var(--Patua);
     margin: 2rem 2px 2rem 0;
 }
 
@@ -356,6 +380,15 @@ li {
     flex: 1;
 }
 
+.portfolio-img img {
+    border-radius: 5%;
+    border: 2px solid black;
+}
+
+.portfolio-img img:hover {
+    transform: scale(1.1);
+}
+
 .portfolio-description {
     flex: 1;
 }
@@ -363,23 +396,27 @@ li {
 .portfolio-description h1 {
     font-size: 3rem;
     font-weight: 300;
+    font-family: var(--Snigle-font);
     margin: 1rem 0;
+    text-transform: uppercase;
     color: white;
 }
 
 .portfolio-description h6 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    opacity: .3;
-    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* text-transform: uppercase; */
+    opacity: ;
+    font-family: var(--Rubik);
+    font-weight: 600;
 }
 
 .portfolio-description .cta {
     display: inline-block;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #3883ff;
+    color: rgb(245, 245, 141);
     transition: color 650ms;
 }
 
@@ -471,7 +508,9 @@ form {
 
 form label {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
     color: whitesmoke;
+    font-family: var(--Patua);
 }
 
 input,
@@ -479,10 +518,16 @@ select,
 textarea {
     width: 100%;
     padding: 1rem;
-    margin-bottom: 5px;
+    margin: 8px 0;
     border: none;
+    border-radius: 4px;
     outline-color: #fd57bf;
 }
+
+
+/* input ::placeholder {
+    color: #221e3f;
+} */
 
 input[type="submit"] {
     width: initial;
@@ -633,6 +678,9 @@ input[type="submit"]:hover {
     .profile-img {
         margin: 0 0 7rem 0;
     }
+    .social-media i {
+        margin-left: 5rem;
+    }
     .portfolio-items {
         flex-direction: column;
     }
@@ -654,6 +702,52 @@ input[type="submit"]:hover {
     }
     .up {
         right: 2rem;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .social-media i {
+        margin-left: 3.5rem;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .menu-toggler {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    .landing-text h1 {
+        font-size: 7rem;
+    }
+    .social-media i {
+        margin-left: 2rem;
+    }
+    .timeline ul {
+        width: 63%;
+        padding: 3.5rem;
+    }
+    .timeline .date::after {
+        left: -4.4rem;
+    }
+    .timeline .date::before {
+        left: -18rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .social-media i {
+        margin-left: 1rem;
+    }
+    .timeline ul {
+        width: 60%;
+        padding: 2rem;
+    }
+    .timeline .date::after {
+        left: -2.9rem;
+    }
+    .timeline .date::before {
+        font-size: 1.3rem;
+        left: -17rem;
     }
 }
 
