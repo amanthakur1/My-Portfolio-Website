@@ -17,4 +17,13 @@ $(document).ready(function() {
         // $('.menu-toggler').removeClass('open');
 
     });
+    $('#up').on('click', function() {
+        $('html, body').animate(keyframes = {
+            scrollTop: 0
+        }, options = 2000);
+    });
+    AOS.init({
+        easing: 'ease',
+        duration: 1800
+    });
 });

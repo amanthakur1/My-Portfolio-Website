@@ -569,6 +569,7 @@ input[type="submit"]:hover {
     top: -2.5rem;
     right: 5rem;
     display: flex;
+    cursor: pointer;
     animation: pulse 2s infinite;
 }
 
