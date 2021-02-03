@@ -55,6 +55,9 @@ section {
 /*End global*/
 
 
+/* --------------------------------------------------------------- */
+
+
 /*Start reusable*/
 
 .container {
@@ -117,6 +120,9 @@ section {
 
 
 /*End reusable*/
+
+
+/* ------------------------------------------------------------------------------- */
 
 
 /*Start header*/
@@ -254,6 +260,9 @@ li {
 /*End header*/
 
 
+/* -------------------------------------------------------------------------------------------------- */
+
+
 /*Start about*/
 
 .about .container {
@@ -278,7 +287,7 @@ li {
     font-size: 2rem;
     font-weight: 300;
     color: white;
-    opacity: .3;
+    opacity: .5;
 }
 
 .profile-img {
@@ -287,13 +296,13 @@ li {
 }
 
 .profile-img img {
-    border-radius: 5%;
+    border-radius: 5% 0% 5% 0%;
     border: 2px solid lightgray;
 }
 
-.profile-img img:hover {
-    transform: scale(1.1);
-}
+/* .profile-img img:hover {
+    transform: scale(1.03);
+} */
 
 .about-details {
     flex: 1;
@@ -316,6 +325,9 @@ li {
 
 
 /*End about*/
+
+
+/* ------------------------------------------------------------------------------------------------------- */
 
 
 /*Start services*/
@@ -364,13 +376,20 @@ li {
 /*End services*/
 
 
+/* ----------------------------------------------------------------------------------------------- */
+
+
 /*Start portfolio*/
 
 .portfolio-items {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    padding: 2rem;
+    margin: 8rem 0rem 8rem 0rem;
+    border: 2px solid whitesmoke;
+    border-radius: 5% 0% 5% 0%;
+    /* margin-top: 8rem; */
 }
 
 .portfolio-items:last-child {
@@ -382,12 +401,12 @@ li {
 }
 
 .portfolio-img img {
-    border-radius: 5%;
+    border-radius: 5% 0% 5% 0%;
     border: 2px solid black;
 }
 
 .portfolio-img img:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .portfolio-description {
@@ -424,9 +443,18 @@ li {
 .portfolio-description .cta:hover {
     color: #2f67cd;
 }
-
+.pro-desc{
+    font-family: var(--Snigle-font);
+    font-size: 1.8rem;
+    color: #c0c4c7;
+    font-weight: 300;
+    opacity: 0.7;
+}
 
 /*End services*/
+
+
+/* ---------------------------------------------------------------------------------- */
 
 
 /*Start timeline*/
@@ -437,7 +465,7 @@ li {
     text-transform: uppercase;
     margin-bottom: 1rem;
     font-weight: 300;
-    opacity: .3;
+    opacity: .9;
 }
 
 .timeline ul {
@@ -450,6 +478,14 @@ li {
     list-style: none;
     text-align: left;
     width: 70%;
+}
+.timeline h6{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* text-transform: uppercase; */
+    opacity: ;
+    font-family: var(--Rubik);
+    font-weight: lighter;
 }
 
 .timeline .date {
@@ -494,6 +530,9 @@ li {
 
 
 /*End timeline*/
+
+
+/* --------------------------------------------------------------------------------- */
 
 
 /*Start contact*/
@@ -551,6 +590,9 @@ input[type="submit"]:hover {
 /*End contact*/
 
 
+/* ---------------------------------------------------------------------------------- */
+
+
 /*Start footer*/
 
 .copyright {
@@ -582,10 +624,16 @@ input[type="submit"]:hover {
 
 .copyright p {
     font-size: 1.4rem;
-}
 
+}
+/* .copyright{
+    border-block: -10% 0% -10% 0%;
+} */
 
 /*End footer*/
+
+
+/* --------------------------------------------------------------------------------- */
 
 
 /*Start animations*/
@@ -606,7 +654,13 @@ input[type="submit"]:hover {
 /*End animations*/
 
 
+/* ----------------------------------------------------------------------------------------- */
+
+
 /*Start media queries*/
+
+
+/* ---------------------------------------------------------------------------------------- */
 
 @media screen and (max-width:1000px) {
     .nav-link {
@@ -615,6 +669,9 @@ input[type="submit"]:hover {
         padding: 0.7rem;
     }
 }
+
+
+/* -------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width:768px) {
     .menu-toggler {
@@ -669,6 +726,9 @@ input[type="submit"]:hover {
     }
 }
 
+
+/* -------------------------------------------------------------------------------------- */
+
 @media screen and (max-width:600px) {
     .menu-toggler {
         top: 2rem;
@@ -699,6 +759,9 @@ input[type="submit"]:hover {
     .timeline .date::before {
         font-size: 1.4rem;
     }
+    .timeline .date::before {
+        left: -20rem;
+    }
     form {
         width: 100%;
     }
@@ -707,11 +770,36 @@ input[type="submit"]:hover {
     }
 }
 
+
+/* ------------------------------------------------------------------------------------ */
+
 @media screen and (max-width:420px) {
     .social-media i {
         margin-left: 3.5rem;
     }
+    .timeline ul {
+        /* width: 63%; */
+        padding: 1.5rem;
+    }
+    .timeline h1{
+        font-size: 1.5rem;
+    }
+    .timeline h6{
+        font-size: 1.2rem;
+    }
+    .timeline p{
+        font-size: 1rem;
+    }
+    .timeline .date::after {
+        left: -2.4rem;
+    }
+    .timeline .date::before {
+        left: -15rem;
+    }
 }
+
+
+/* ----------------------------------------------------------------------------------- */
 
 @media screen and (max-width:375px) {
     .menu-toggler {
@@ -726,15 +814,28 @@ input[type="submit"]:hover {
     }
     .timeline ul {
         width: 63%;
-        padding: 3.5rem;
+        padding: 1.5rem;
     }
+    .timeline h1{
+        font-size: 1.5rem;
+    }
+    .timeline h6{
+        font-size: 1.2rem;
+    }
+    .timeline p{
+        font-size: 1rem;
+    }
+
     .timeline .date::after {
-        left: -4.4rem;
+        left: -2.4rem;
     }
     .timeline .date::before {
-        left: -18rem;
+        left: -15rem;
     }
 }
+
+
+/* ----------------------------------------------------------------------------------- */
 
 @media screen and (max-width:320px) {
     .social-media i {
@@ -742,16 +843,22 @@ input[type="submit"]:hover {
     }
     .timeline ul {
         width: 60%;
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .timeline .date::after {
         left: -2.9rem;
     }
     .timeline .date::before {
         font-size: 1.3rem;
-        left: -17rem;
+        left: -16rem;
     }
 }
 
 
+/* ---------------------------------------------------------------------------------- */
+
+
 /*End media queries*/
+
+
+/* ------------------------------------------------------------------------------------ */
